@@ -16,6 +16,7 @@
 - Fixed issue where statements under top-level in-eachs were not correctly tracked.
 - Moved storage of reference->symbol mapping to on-demand timing, should significantly speed
   up device analysises
+- Capture and log unknown fields found in configuration files.
 
 ## 0.9.12
 - Added 'simics\_util\_vect' as a known provisional (with no DLS semantics)
