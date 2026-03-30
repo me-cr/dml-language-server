@@ -90,9 +90,9 @@ relying on the linting configuration. This can be done with in-line
 linting configuration inside comments.
 
 The general syntax is:
-`// dls-lint: <command>=<target>`
+`// dml-lint: <command>=<target>`
 Note that only one-line comments are allowed, and only if no text is between
-the comment start and 'dls-lint'.
+the comment start and 'dml-lint'.
 
 Currently supported commands are:
 * 'allow-file' Will not report the lint rule specified by \<target> for the
@@ -106,13 +106,13 @@ same identifier used for \<target>.
 
 For example
 ```
-// dls-lint: allow-file=long_lines
+// dml-lint: allow-file=long_lines
 method now_we_can_declare_this_method_with_a_really_really_really_really_long name() {
 
-// dls-lint: allow=nsp_unary
-// dls-lint: allow=indent_no_tabs
+// dml-lint: allow=nsp_unary
+// dml-lint: allow=indent_no_tabs
 	param p = (1 ++ *
-            4); // dls-lint: allow=indent_paren_expr
+            4); // dml-lint: allow=indent_paren_expr
 }
 ```
 Will allow 'long_lines' globally, 'nsp_unary' and 'indent_no_tabs' on the
